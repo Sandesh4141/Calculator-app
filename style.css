@@ -119,9 +119,17 @@ body{
     background-color:var(--toggle-and-keypad-bg);
     padding: 0 0.1em;
     border-radius: 1em;
-    width: 4em;
-
+    width: 3.6em;
+    display: flex;
+    justify-content: flex-start;
 }
+.rounded{
+    width: 18px;
+    border-radius: 50%;
+    background-color: red;
+    height: 18px;
+}
+
 input[type ^="range"]{
     max-width: 100%;
     outline: none;
@@ -133,7 +141,7 @@ input[type ^="range"]{
 .right-content{
     display: flex;
     align-items: center;
-    
+    /* justify-content: space-around; */
 }
 .right-content p{
     font-size: 10px;
