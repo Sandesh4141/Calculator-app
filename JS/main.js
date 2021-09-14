@@ -29,3 +29,46 @@ function del(){
         updateScreen();
     }
 }
+
+function calculate(){
+    var res = eval(variables[0]+operator+ variables[1]);
+    operator = '';
+    variables[1] = '';
+    variables[0]= res;
+    id = 0;
+    updateScreen();
+    variables[0] = '';
+
+}
+
+resetButton.addEventListener('click',resetAll);
+numbers.forEach(button=>{
+    button.addEventListener('click', ()=>{
+        const regexp = /^[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)$/;
+        if(regexp.test(variables[id]+button.innerText)){
+            variables[id] += button.innerText;
+            updateScreen();
+        }
+    });
+});
+
+deleteButton.addEventListener('click', del);
+operations.forEach(button=>{
+    button.addEventListener('click', ()=>{
+        if (variables[0] =='' && screen.innerText !='0') {
+            variables[0].screen.innerText;
+        }
+        id++;
+        switch(button.innerText){
+            case '+':
+            case '-':
+            case '/':
+                operator = button.innerText;
+                break;
+            case 'X':
+                operator = '*';
+        }
+
+    });
+});
+equalButton.addEventListener('click', calculate);
