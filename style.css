@@ -173,6 +173,10 @@ input[type ^="range"]{
     font-size: 32px;
     text-align: end;
     outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
 }
 /* -------input keypad------- */
 
