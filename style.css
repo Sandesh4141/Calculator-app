@@ -1,0 +1,267 @@
+/* ----------- Css Reset ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    /* border: 1px solid rgb(196, 45, 45); */
+}
+
+/* theme1 styles */
+:root, .theme-1{
+    /* main backgrounds */
+    --main-background:hsl(222, 26%, 31%);
+    --toggle-and-keypad-bg:hsl(223, 31%, 20%);
+    --screen-background:hsl(224, 36%, 15%);
+
+    /* -----keys-background ----- */
+    --key-primary-bg:hsl(225,21%,49%);
+    --key-primary-shadow:hsl(224, 28%, 35%);
+
+    /* red buttons backgrounds*/
+    --key-secondary-bg:  hsl(6, 63%, 50%);
+    --key-secondary-shadow: hsl(6, 70%, 34%);
+    
+    /* orange colors for buttons(innercontent) */
+    --key-other-bg:hsl(30, 25%, 89%);
+    --key-other-shadow:hsl(28, 16%, 65%);
+
+    /* keys-text (innercontent) */
+    --text-color-primary:hsl(0, 0, 100%);
+    --text-color-secondary:hsl(221, 14%, 31%);
+    --color-text-screen:hsl(0, 0, 100%);
+}
+
+/* theme 2 */
+.theme-2{
+    /* main backgrounds */
+    --main-background:hsl(0, 0%, 90%);
+    --toggle-and-keypad-bg:hsl(0, 5%, 81%);
+    --screen-background:hsl(0, 0%, 93%);
+
+    /* -----keys-background ----- */
+    --key-primary-bg:hsl(185, 42%, 37%);
+    --key-primary-shadow:hsl(224, 28%, 35%);
+
+    /* red buttons backgrounds*/
+    --key-secondary-bg:  hsl(25, 98%, 40%);
+    --key-secondary-shadow: hsl(25, 99%, 27%);
+    
+    /* orange colors for buttons(innercontent) */
+    --key-other-bg: hsl(45, 7%, 89%);
+    --key-other-shadow:hsl(35, 11%, 61%);
+
+    /* keys-text (innercontent) */
+    --text-color-primary:hsl(60, 10%, 19%);
+    --text-color-secondary:hsl(0, 0, 100%);
+    --color-text-screen:hsl(0, 0, 100%);
+}
+.theme-3{
+    /* main backgrounds */
+    --main-background:hsl(268, 75%, 9%);
+    --toggle-and-keypad-bg:hsl(268, 71%, 12%);
+    --screen-background:hsl(268, 71%, 12%);
+
+    /* -----keys-background ----- */
+    --key-primary-bg:hsl(281, 89%, 26%);
+    --key-primary-shadow:hsl(285, 91%, 52%);
+
+    /* red buttons backgrounds*/
+    --key-secondary-bg:  hsl(176, 100%, 44%);
+    --key-secondary-shadow: hsl(177, 92%, 70%);
+    
+    /* orange colors for buttons(innercontent) */
+    --key-other-bg: hsl(268, 47%, 21%);
+    --key-other-shadow:hsl(290, 70%, 36%);
+
+    /* keys-text (innercontent) */
+    --text-color-primary:hsl(52, 100%, 62%);
+    --tex-color-secondary:hsl(198, 20%, 13%);
+    --color-text-screen:hsl(0, 0, 100%);
+    
+}
+body{
+    background-color: var(--main-background);
+    text-align: center;
+    font-family: 'Spartan', sans-serif;
+}
+.container{
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.cal-app{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3%;
+    width: 25em;
+    
+}
+.cal-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cal-head h1{
+    color: var(--text-color-primary);
+}
+.right-content h4{
+    color: var(--text-color-primary);
+}
+.theme-change-btns{
+    margin: 0 0.6em;
+    background-color:var(--toggle-and-keypad-bg);
+    padding: 0 0.1em;
+    border-radius: 1em;
+    width: 4em;
+
+}
+input[type ^="range"]{
+    max-width: 100%;
+    outline: none;
+    background-color: transparent;
+    appearance: none;
+}
+
+
+.right-content{
+    display: flex;
+    align-items: center;
+    
+}
+.right-content p{
+    font-size: 10px;
+    margin-top: 20px;
+    color: var(--text-color-primary);
+}
+.right-content-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -----section-output-window----- */
+.output-window{
+    max-width: 30em;
+    height: auto;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 0.7em 0;
+    
+}
+.main-window{
+    width: 100%;
+    background-color: var(--screen-background);
+    height: 3em;
+    color: var(--text-color-primary);
+    font-size: 32px;
+    text-align: end;
+    outline: none;
+}
+/* -------input keypad------- */
+
+.input-keypad{
+    background-color: var(--toggle-and-keypad-bg);
+}
+
+.input-keypad, .main-window, .cal-head{
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+/* -----------buttons---------- */
+.grid-buttons{
+    display: grid;
+    grid-gap: 10px;
+    column-gap: 10px;
+    margin: 1em 0;
+    
+}
+.row{
+    margin: auto;
+}
+.btn{
+    padding: 1px 10px;
+    width: 1.8em;
+    background-color: var(--key-other-bg);
+    border: 1px solid var(--key-other-bg);
+    border-radius: 5px;
+    box-shadow: 0 4px var(--key-other-shadow);
+    font-size: 32px;
+    color: var(--text-color-primary);
+    margin: 5px;
+    cursor: pointer;
+    
+}
+.m-btn{
+    padding: 10px 14px;
+    border-radius: 5px;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* ------- main-buttons ------ */
+#del, #reset{
+    background-color: var(--key-primary-bg);
+    border: 1px solid var(--key-primary-bg);
+    border-radius: 5px;
+    color: white;
+    box-shadow: 0 3px var(--key-primary-shadow);
+    cursor: pointer;
+    font-family: 'Spartan', sans-serif;
+}
+#total{
+    background-color: var(--key-secondary-bg);
+    border: 1px solid var(--key-secondary-bg);
+    border-radius: 5px;
+    box-shadow: 0 4px var(--key-secondary-shadow);
+    color: var(--color-text-screen);
+    
+}
+
+#reset, #total{
+    width: 150px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* -----------media Queries---------- */
+
+
+@media (max-width:410px) {
+    .btn{
+        width: 0.8em;
+        padding: 10px 18px;
+        font-size: 30px;
+    
+    }
+    .m-btn{
+        padding: 0.5em 0.9em;
+    }
+    #reset{
+        width: 115px;
+
+    }
+    #total{
+        width: 115px;
+    }
+    #del{
+        font-size: 20px;
+        padding: 0.9em 0.9em;
+        width: 28px;
+    }
+}
+
+@media (max-width:321px){
+    .btn{
+        width: 0.7em;
+        padding: 6px 15px;
+        font-size: 30px;
+    }
+
+}
