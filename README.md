@@ -1,5 +1,5 @@
 # Frontend Mentor - Calculator app solution
-
+[solution](https://awesome-wescoff-02a482.netlify.app/)
 This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29).  
 
 ## Table of contents
@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution URL here](https://github.com/Sandesh4141/Calculator-app)
-- Live Site URL: [Live site URL here](https://awesome-wescoff-02a482.netlify.app/)
+- Live Solution: [click here](https://awesome-wescoff-02a482.netlify.app/)
 
 ## My process
 
